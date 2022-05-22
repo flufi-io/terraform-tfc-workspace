@@ -4,8 +4,8 @@ name: infracost
 on: [ pull_request ]
 
 env:
-  OAUTH_TOKEN_ID: ${{ secrets.OAUTH_TOKEN_ID }}
-  TFE_TOKEN: ${{ secrets.TFE_TOKEN }}
+  TF_VAR_vcs_repo_oauth_token_id: ${{ secrets.OAUTH_TOKEN_ID }}
+  TF_VAR_tfe_token: ${{ secrets.TFE_TOKEN }}
 
 jobs:
   infracost:

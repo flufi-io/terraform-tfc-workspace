@@ -13,10 +13,7 @@ import (
 )
 
 func TestCompleteExample(t *testing.T) {
-	err := godotenv.Load("../../.env")
-	if err != nil {
-		log.Fatalf("Some error occured. Err: %s", err)
-	}
+	godotenv.Load("../../.env")
 	workspaceName := "terraform-workspace-dummy"
 	// DELAY is the time in seconds to run terraform destroy after terraform apply
 	DELAY, _ := strconv.Atoi(os.Getenv("DELAY"))
