@@ -1,0 +1,6 @@
+name                = "terraform-workspace-dummy"
+description         = "dummy workspace"
+terraform_version   = "1.2.0"
+organization        = "flufi"
+vcs_repo_branch     = "main"
+vcs_repo_identifier = "flufi-io/terraform-github-repositories"
