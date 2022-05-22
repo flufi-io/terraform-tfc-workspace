@@ -21,8 +21,7 @@ func TestCompleteExample(t *testing.T) {
 		TerraformDir: "../../examples/complete",
 		VarFiles:     varFiles,
 		Vars: map[string]interface{}{
-			"tfe_token":               os.Getenv("TFE_TOKEN"),
-			"vcs_repo_oauth_token_id": os.Getenv("OAUTH_TOKEN_ID"),
+			"tfe_token": os.Getenv("TFE_TOKEN"),
 		},
 		Upgrade:     true,
 		Reconfigure: true,

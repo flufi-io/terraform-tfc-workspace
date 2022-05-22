@@ -38,11 +38,11 @@
 #  description = "Repository ORGANIZATION/Repository"
 #  type        = string
 #}
-variable "vcs_repo_oauth_token_id" {
-  type        = string
-  sensitive   = true
-  description = "Oauth Token ID"
-}
+#variable "vcs_repo_oauth_token_id" {
+#  type        = string
+#  sensitive   = true
+#  description = "Oauth Token ID"
+#}
 #variable "vcs_repo_branch" {
 #  default     = "main"
 #  description = "Repo Branch"

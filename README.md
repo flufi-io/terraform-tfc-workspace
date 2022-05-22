@@ -4,9 +4,8 @@
 # Examples
 ```hcl
 module "workspace" {
-  source                  = "../../"
-  variables_file          = "variables.enc.yml"
-  vcs_repo_oauth_token_id = var.vcs_repo_oauth_token_id
+  source         = "../../"
+  variables_file = "variables.enc.yml"
 }
 ```
 
@@ -21,7 +20,6 @@ module "workspace" {
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_variables_file"></a> [variables\_file](#input\_variables\_file) | Path to the encrypted variables file | `string` | `"variables.enc.yml"` | no |
-| <a name="input_vcs_repo_oauth_token_id"></a> [vcs\_repo\_oauth\_token\_id](#input\_vcs\_repo\_oauth\_token\_id) | Oauth Token ID | `string` | n/a | yes |
 
 ## Resources
 
