@@ -27,7 +27,7 @@ data "sops_file" "variables" {
 
 
 resource "tfe_variable" "terraform_variable" {
-  for_each     = !can(local.variables["terraform"]) ? toset([]) : toset([for k, v in local.variables["terraform"] : k])
+  for_each     = local.variables["terraform"] == null ? toset([]) : toset([for k, v in local.variables["terraform"] : k])
   key          = each.key
   value        = jsonencode(yamldecode(data.sops_file.variables.raw).variables.terraform[each.key])
   category     = "terraform"
@@ -37,7 +37,7 @@ resource "tfe_variable" "terraform_variable" {
 }
 
 resource "tfe_variable" "terraform_secret" {
-  for_each     = !can(local.secrets["terraform"]) ? toset([]) : toset([for k, v in local.secrets["terraform"] : k])
+  for_each     = local.secrets["terraform"] == null ? toset([]) : toset([for k, v in local.secrets["terraform"] : k])
   key          = each.key
   value        = jsonencode(yamldecode(data.sops_file.variables.raw).secrets.terraform[each.key])
   category     = "terraform"
@@ -47,7 +47,7 @@ resource "tfe_variable" "terraform_secret" {
 }
 
 resource "tfe_variable" "env_variable" {
-  for_each     = !can(local.variables["env"]) ? toset([]) : toset([for k, v in local.variables["env"] : k])
+  for_each     = local.variables["env"] == null ? toset([]) : toset([for k, v in local.variables["env"] : k])
   key          = each.key
   value        = jsonencode(yamldecode(data.sops_file.variables.raw).variables.env[each.key])
   category     = "terraform"
@@ -56,7 +56,7 @@ resource "tfe_variable" "env_variable" {
 }
 
 resource "tfe_variable" "env_secret" {
-  for_each     = !can(local.secrets["env"]) ? toset([]) : toset([for k, v in local.secrets["env"] : k])
+  for_each     = local.secrets["env"] == null ? toset([]) : toset([for k, v in local.secrets["env"] : k])
   key          = each.key
   value        = jsonencode(yamldecode(data.sops_file.variables.raw).secrets.env[each.key])
   category     = "env"
