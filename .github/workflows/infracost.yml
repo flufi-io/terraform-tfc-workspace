@@ -2,6 +2,11 @@
 # describe other options for 'on', 'pull_request' is a good default.
 name: infracost
 on: [ pull_request ]
+
+env:
+  TF_VAR_vcs_repo_oauth_token_id: ${{ secrets.OAUTH_TOKEN_ID }}
+  TF_VAR_tfe_token: ${{ secrets.TFE_TOKEN }}
+
 jobs:
   infracost:
     runs-on: ubuntu-latest # The following are JavaScript actions (not Docker)

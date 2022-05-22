@@ -1,0 +1,10 @@
+variables:
+  env:
+    ENVIRONMENT_VARIABLE: DUMMY_VALUE
+  terraform:
+    terraform_variable: dummy_value
+secrets:
+  env:
+    ENVIRONMENT_SCRET: DUMMY_SCRET
+  terraform:
+    terraform_scret: dummy_scret

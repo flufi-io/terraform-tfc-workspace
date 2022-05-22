@@ -1,0 +1,36 @@
+variables:
+    env:
+        ENVIRONMENT_VARIABLE: DUMMY_VALUE
+    terraform:
+        terraform_variable: dummy_value
+secrets:
+    env:
+        ENVIRONMENT_SECRET: ENC[AES256_GCM,data:slIewYoKr/ycjoYX,iv:pvWylewuKklChgCl2DmFDdiWiWAWNBugZSu3Ypg17oY=,tag:YTCtUESouGKOtQE6BSKM1A==,type:str]
+    terraform:
+        terraform_secret: ENC[AES256_GCM,data:6VLjZLkm4Y99LCpi,iv:e7q10+lB/CpIbOKANj6Hmpp0vkgE6koXgpwjDaMwcKs=,tag:y6wp2X0xppz5Z1/k2B0Fog==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2022-05-22T04:27:54Z"
+    mac: ENC[AES256_GCM,data:gtMj96uHrd4Jv9i/HzKK1WfltiZSHfyU7wqTXOvn9a5bM/srCUMO+CmuYcNflHhjGRqOKnmMa75afg6MVPfVml9RVyLi4WWaQPfBB+rWFP8ra1Y9DBoveOOW0D8CUKowjGUsE2rMVtHqKUiAwI+0idZtvVl6J3k1FGK6JUwIfbg=,iv:wEFj+MEMbM2QMrtJMy9di7Dtoj1QE85lWmWQbAHrhUI=,tag:AmDzZoRFzRWpHmhl1R3p8w==,type:str]
+    pgp:
+        - created_at: "2022-05-22T04:27:53Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQEMAyUpShfNkFB/AQgAtpplEiyDFqOEdL4NbhTTugZYrdZlh0/N9LwxterlEVDp
+            g0O4fGxLUSsWIH8JPD+M3HCLn8PoualWhNNsumUJuQJV6NhiH3EgTt+dQ4Xc6Zgk
+            69Cm688bjo+CGXgdEo+SJ6673RfTVroZyENZacM9DbzcPJsrEGkWgr+Tk5uFjCCO
+            fEVNwhE+8P2KAJ3q3umV5jeys5bU+gEB0zguvZmYVpJfqWZtsYn3cThUqhoARRf1
+            qGdVYISqr1zRAczfX9I48ClN0vPNnWN3g+MditxpOcg05shksjESAe2o1hvk+T4H
+            lMJbC7yQxEugR6stOBOIugEMqT1xYs84CkHF8aKbdNJcAXzv6+SmZnMrEUNK78Ea
+            MAfHrOotl7P2NcdmEUjYQ6d4hO7kbny1wmQ4Cw9lH/DJ6bNSJeyeOUK54+AypgRm
+            A15BYwKu6wC44cOgvkkC9NgmnKrACahLWmfGMjo=
+            =+viU
+            -----END PGP MESSAGE-----
+          fp: FBC7B9E2A4F9289AC0C1D4843D16CEE4A27381B4
+    encrypted_regex: ^(secrets)$
+    version: 3.7.3

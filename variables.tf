@@ -48,3 +48,9 @@ variable "vcs_repo_branch" {
   description = "Repo Branch"
   type        = string
 }
+
+variable "variables_file" {
+  default     = "variables.enc.yml"
+  type        = string
+  description = "Path to the encrypted variables file"
+}

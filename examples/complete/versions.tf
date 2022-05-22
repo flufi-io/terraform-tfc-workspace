@@ -1,8 +1,12 @@
-#terraform {
-#  required_providers {
-#    random = {
-#      source  = "hashicorp/random"
-#      version = "3.2.0"
-#    }
-#  }
-#}
+terraform {
+  required_providers {
+    tfe = {
+      source  = "hashicorp/tfe"
+      version = "0.31.0"
+    }
+    sops = {
+      source  = "carlpett/sops"
+      version = "0.7.1"
+    }
+  }
+}
