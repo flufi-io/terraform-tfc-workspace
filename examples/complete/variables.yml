@@ -1,10 +1,50 @@
+workspace:
+  name: terraform-dummy-workspace
+  organization: flufi
+  tag_names:
+    - test
+    - terraform
+  description: dummy workspace
+  identifier: flufi-io/terraform-github-repositories
+  branch: main
+  allow_destroy_plan: false
+  auto_apply: false
+  speculative_enabled: false
+  terraform_version: 1.2.0
+  secrets:
+    oauth_token_id: TOKEN
+
 variables:
   env:
     ENVIRONMENT_VARIABLE: DUMMY_VALUE
+    ENVIRONMENT_VARIABLE_LIST:
+      -item1
+      -item2
+    ENVIRONMENT_VARIABLE_MAP:
+      key1: value1
+      key2: value2
   terraform:
     terraform_variable: dummy_value
+    terraform_list:
+      - item1
+      - item2
+    terraform_map:
+      key1: value1
+      key2: value2
 secrets:
   env:
     ENVIRONMENT_SCRET: DUMMY_SCRET
+    ENVIRONMENT_SECRT_LIST:
+      - item1
+      - item2
+    ENVIRONMENT_SCRT_MAP:
+      key1: value1
+      key2: value2
   terraform:
-    terraform_scret: dummy_scret
+    terraform_scrt: dummy_secrt
+    scret_list:
+      - item1
+      - item2
+    secrt_map:
+      key1: value1
+      key2: value2
