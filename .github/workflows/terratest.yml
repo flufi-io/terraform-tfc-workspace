@@ -1,9 +1,11 @@
 name: terratest
 on:
   - pull_request
+  -
 env:
   OAUTH_TOKEN_ID: ${{ secrets.OAUTH_TOKEN_ID }}
   TFE_TOKEN: ${{ secrets.TFE_TOKEN }}
+
 jobs:
   terratest:
     runs-on: ubuntu-latest
