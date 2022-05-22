@@ -15,7 +15,7 @@ jobs:
   infracost:
     runs-on: ubuntu-latest # The following are JavaScript actions (not Docker)
     env:
-      working-directory: main # Update this!
+      working-directory: main/examples/complete/ # Update this!
     name: Run Infracost
     steps:
       - name: configure aws credentials
@@ -23,6 +23,11 @@ jobs:
         with:
           role-to-assume: ${{ secrets.OIDC_ROLE }}
           aws-region: ${{ secrets.AWS_REGION }}
+      - name: Import GPG key
+        id: import_gpg
+        uses: crazy-max/ghaction-import-gpg@v4
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
       - name: checkout
         uses: actions/checkout@v3
         with:
