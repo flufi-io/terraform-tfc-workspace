@@ -41,7 +41,7 @@ resource "tfe_variable" "terraform_secret" {
   key          = each.key
   value        = jsonencode(yamldecode(data.sops_file.variables.raw).secrets.terraform[each.key])
   category     = "terraform"
-  sensitive    = false
+  sensitive    = true
   workspace_id = tfe_workspace.workspace.id
   hcl          = true
 }
@@ -60,6 +60,6 @@ resource "tfe_variable" "env_secret" {
   key          = each.key
   value        = jsonencode(yamldecode(data.sops_file.variables.raw).secrets.env[each.key])
   category     = "env"
-  sensitive    = false
+  sensitive    = true
   workspace_id = tfe_workspace.workspace.id
 }
