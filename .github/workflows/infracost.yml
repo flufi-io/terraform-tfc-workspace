@@ -22,6 +22,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: ${{ secrets.OIDC_ROLE }}
+          aws-region: ${{ secrets.AWS_REGION }}
       - name: checkout
         uses: actions/checkout@v3
         with:
