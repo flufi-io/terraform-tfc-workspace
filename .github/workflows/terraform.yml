@@ -4,6 +4,7 @@ on:
 permissions:
   id-token: write
   contents: read
+  pull-requests: write
 env:
   TFE_TOKEN: ${{ secrets.TFE_TOKEN_SANDBOX }}
 jobs:

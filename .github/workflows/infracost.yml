@@ -6,6 +6,7 @@ on: [ pull_request ]
 permissions:
   id-token: write
   contents: read
+  pull-requests: write
 
 env:
   TF_VAR_vcs_repo_oauth_token_id: ${{ secrets.OAUTH_TOKEN_ID }}
