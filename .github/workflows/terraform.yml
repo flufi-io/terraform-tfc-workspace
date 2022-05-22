@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: main/examples/complete/
+        working-directory: main
 
     steps:
       - name: configure aws credentials

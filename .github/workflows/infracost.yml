@@ -15,7 +15,7 @@ jobs:
   infracost:
     runs-on: ubuntu-latest # The following are JavaScript actions (not Docker)
     env:
-      working-directory: main/examples/complete/ # Update this!
+      working-directory: main # Update this!
     name: Run Infracost
     steps:
       - name: configure aws credentials
