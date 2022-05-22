@@ -4,11 +4,12 @@ on:
   -
 env:
   OAUTH_TOKEN_ID: ${{ secrets.OAUTH_TOKEN_ID }}
-  TFE_TOKEN: ${{ secrets.TFE_TOKEN }}
+  TFE_TOKEN: ${{ secrets.TFE_TOKEN_SANDBOX }}
 
 permissions:
   id-token: write
   contents: read
+  pull-requests: write
 
 jobs:
   terratest:
@@ -18,6 +19,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: ${{ secrets.OIDC_ROLE }}
+          aws-region: ${{ secrets.AWS_REGION }}
       - name: checkout
         uses: actions/checkout@v3
         with:
