@@ -4,7 +4,7 @@ on:
   -
 env:
   OAUTH_TOKEN_ID: ${{ secrets.OAUTH_TOKEN_ID }}
-  TFE_TOKEN: ${{ secrets.TFE_TOKEN }}
+  TFE_TOKEN: ${{ secrets.TFE_TOKEN_SANDBOX }}
 
 permissions:
   id-token: write
