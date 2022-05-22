@@ -20,8 +20,8 @@ sections:
 #content: ""
 content: |-
   # Examples
-  ```hcl
-  {{ include "examples/complete/main.tf" }}
+  ```markdown
+  {{ include "examples/complete/README.md" }}
   ```
   {{ .Header }}
   {{ .Providers }}

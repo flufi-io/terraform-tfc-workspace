@@ -1,4 +1,4 @@
-# Example
+# Complete
 
 ```terraform
 module "workspace" {
