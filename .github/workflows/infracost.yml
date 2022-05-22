@@ -3,6 +3,10 @@
 name: infracost
 on: [ pull_request ]
 
+permissions:
+  id-token: write
+  contents: read
+
 env:
   TF_VAR_vcs_repo_oauth_token_id: ${{ secrets.OAUTH_TOKEN_ID }}
   TF_VAR_tfe_token: ${{ secrets.TFE_TOKEN }}
@@ -14,6 +18,10 @@ jobs:
       working-directory: main/examples/complete/ # Update this!
     name: Run Infracost
     steps:
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.OIDC_ROLE }}
       - name: checkout
         uses: actions/checkout@v3
         with:
