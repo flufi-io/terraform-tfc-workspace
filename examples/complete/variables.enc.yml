@@ -1,18 +1,18 @@
 workspace:
     name: terraform-dummy-workspace
-    organization: flufi
+    organization: flufi-sandbox
     tag_names:
         - test
         - terraform
     description: dummy workspace
-    identifier: flufi-io/terraform-github-repositories
+    identifier: pipo-flufi/terraform-dummy-repository
     branch: main
     allow_destroy_plan: false
     auto_apply: false
     speculative_enabled: false
     terraform_version: 1.2.0
     secrets:
-        oauth_token_id: ENC[AES256_GCM,data:W+xC+6/yjFpF11WF6wDxMeU5/A==,iv:7GgmvFebNk0c/ii3261Aiskrg83UMzTOWKlzATHnWZA=,tag:NSREvrHPiXlRFcWrKODCYA==,type:str]
+        oauth_token_id: ENC[AES256_GCM,data:uHZFeLhIXAo+KqHTSOwSHBufww==,iv:YKeTD5st5qjN+Cy6xqWXxTZx8daVDjU/LvAWcSIYvsM=,tag:3yjx9AhtvlOvRdRL/eNEig==,type:str]
 variables:
     env:
         ENVIRONMENT_VARIABLE: DUMMY_VALUE
@@ -30,44 +30,49 @@ variables:
             key2: value2
 secrets:
     env:
-        ENVIRONMENT_SCRET: ENC[AES256_GCM,data:s8HEyVgRUrFaSW8=,iv:8OYifkx+KrXMEj5/bcdE8Rsm6me98Nvike+5g2syhco=,tag:/fiMm6Fy2NbnWCglZQZNSg==,type:str]
+        ENVIRONMENT_SCRET: ENC[AES256_GCM,data:iUJYDJcwGR2jlOM=,iv:ja0zxZq/DCo69B1vG2d5WVzWxphoYQrsjEDhY8wjl0A=,tag:Q3WpIBAYtuQr/NenPkp5kg==,type:str]
         ENVIRONMENT_SECRT_LIST:
-            - ENC[AES256_GCM,data:uwbg4iA=,iv:fQLF4WZH6EWEHAvZhsm2BWKbgdZHgYJfzXWmQvb2yOk=,tag:PitUeteMOrlhzBTnWxh8sQ==,type:str]
-            - ENC[AES256_GCM,data:uvWB9lA=,iv:5A9ZzAJa7FsFZLkKCzECyVAbwrxcZ9iYvhDy4rBUQds=,tag:DNLTEO8vXaCYHouyjssT6w==,type:str]
+            - ENC[AES256_GCM,data:Heb30a0=,iv:/d5MxHQIJB4Y8NtR35KsFqsyfxxRsJAZD2FzVEyWGS0=,tag:jUb8kpyfLgGKI0C4V6/Azg==,type:str]
+            - ENC[AES256_GCM,data:XIckKx8=,iv:4wPIRlOuFm6oqyDe+Ft+0FMu59N12oOciyh8MAnW8dg=,tag:ODtS2xQc3XNc/BHwYOgi8A==,type:str]
         ENVIRONMENT_SCRT_MAP:
-            key1: ENC[AES256_GCM,data:zNMFiMUd,iv:sqOu4jmHiAvPb9ISVIce+ek/5bUHFy+jAXlskN5iipk=,tag:E5KAgQHgKIW36EuehSlODA==,type:str]
-            key2: ENC[AES256_GCM,data:CHGuZAEf,iv:8LtqVSB5TqP2NQXtptFR69L0p61DmRREBqcZEsL5/xY=,tag:FmWN+BCZxCE88VmPdOSG+g==,type:str]
+            key1: ENC[AES256_GCM,data:Vc4lxP61,iv:rnP87fWf5CP0cSBk4HP8Fv3uoqndkM0Yg9WcKmS+4Eg=,tag:h+s4BV+a6JpqaVj/TQcLdw==,type:str]
+            key2: ENC[AES256_GCM,data:6RvFHAFn,iv:5+7f0iVECsd3V9DFORIwrM/vnbk36XncgRkoqlgk1tw=,tag:1gF2i6larhBg1DYcqDNLBw==,type:str]
     terraform:
-        terraform_scrt: ENC[AES256_GCM,data:S0aht+jwDZ/ujis=,iv:Rr56gAHdeq9eSjX2/53yEvlzdvU7XzSJkydC+KDMkEQ=,tag:1cLZb5x6MS5scYq/R9z2ug==,type:str]
+        terraform_scrt: ENC[AES256_GCM,data:qlKpCai5ZEGmGOc=,iv:4mD+47cNx4qfJvBGYEzyyZVWzoRApfQ6xPmRctA70sM=,tag:9OZ8ZJSajbLdeXb4oWK/Fg==,type:str]
         scret_list:
-            - ENC[AES256_GCM,data:cV4hsJQ=,iv:ePnXwAEmTeHuuRLNbMRsng+spQy4zMR6hOj79sFrk4E=,tag:8o1Twf+N2KCpvTXPWvrifQ==,type:str]
-            - ENC[AES256_GCM,data:Y+i/Z0Y=,iv:Q1cqr6JJ9yAwkuYIPUnrmy5Z1mWqrG2WyIDpveEFn9I=,tag:A+D0lpoyxWiMkHCLFGp+SQ==,type:str]
+            - ENC[AES256_GCM,data:fWsCQ9E=,iv:ZE6lmr6b/4VsOewEPRxhcw3oxYZXfzotVZbNpA4vSXg=,tag:HfoUK+ANW8aif8VcR0HKeA==,type:str]
+            - ENC[AES256_GCM,data:0wQJypI=,iv:Nv3nTih/uPvYPHsZr+ZKFDXg6iDBayLV1boORkxOzsA=,tag:l9aNLQd3tvqmawoix/6lcA==,type:str]
         secrt_map:
-            key1: ENC[AES256_GCM,data:5rwE5GR6,iv:cZbtc2fPAniEcdwOXrwHXJoaorLcXV6wdwJML8n4Rog=,tag:Pg7VL4mYpK7VivxNxzbfZg==,type:str]
-            key2: ENC[AES256_GCM,data:UiXGrYpS,iv:eG7efrM1V8tfVyfv7bd3ILEmT3IMRdsz1FqMI5YVxqE=,tag:1gADyZ4xSc3TIdu9TFcG0A==,type:str]
+            key1: ENC[AES256_GCM,data:y64YqJTn,iv:uDpclBMKd0lWrrXqeqX0ckPe4Zusj4uRGHTkBiwdc5Q=,tag:jQmMairjK8w5g9CnEdMTgA==,type:str]
+            key2: ENC[AES256_GCM,data:A4ktLsIs,iv:0iuJSdRcZJBod2mOE2q4EN8lG7v4WFs/O3R7TDm7ttk=,tag:hXBP3F8u7EEXpEWG+Oebjg==,type:str]
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2022-05-22T16:42:32Z"
-    mac: ENC[AES256_GCM,data:CfC9vSpXBeXukn7ZK6pU+UvFuRV5HGKlXUimVC1OLupjBwl0zbIlG5/IM5KJTE9qKyNxIhQ+eSLdRwhx1dX9hvX9v08h6PsKWxJH4WAd2KQxiLny9c09HGDcUBsqO09YrxrlLiDq3q5A2PQmbV6j3LnrQWAr1ZnlWDKtc19DaSM=,iv:aStm9v5SwxKeWLK1eu4pnFrPoOadFzBPh3IP3ArfYtg=,tag:S5veQ8l6fmDDexI6eXHCtw==,type:str]
+    lastmodified: "2022-05-22T17:29:35Z"
+    mac: ENC[AES256_GCM,data:wMErh3T2YYpRApHN3yViM19Se0tD3Rhnbk3MrGXzIr1yE1r0jKTldzZo8gyXDwxcbu7C4v/xLKGsHG3IyWbnQq/8vNj2dK+H0UJ56vhUFjMky41cnanm3cnP2QlFekI7bjS7YE/whGdYY/Z1I1aaKqZwUmPzGiYA8lp1anLwrNc=,iv:AnDO/fArAAXu3Ev7NEx5+Qrdpv6q8Qlb1ssp6NC6sfQ=,tag:1xLF+hAo4cNiuxfSduV7og==,type:str]
     pgp:
-        - created_at: "2022-05-22T16:42:30Z"
+        - created_at: "2022-05-22T17:29:34Z"
           enc: |
             -----BEGIN PGP MESSAGE-----
 
-            hQEMAyUpShfNkFB/AQf/f7u1H3JYU5AvZDoQHmvjqw7fBkxhdjcfdeOtU+Fus1Un
-            GD7CzR5AxAGl3PTNV5Ty2o4vuqHn54AyBLqPpBaQKobbwBY7NKD/EAkBYqHdvH8r
-            n8TCQi3CZQpmYGnEfXU4Pbwq6E0rc08AKZECMHGNqz3aWqh70Rwpk6xhxn5Fzdyj
-            pYs0tbJ1mwi501W9xXxHNNA2AMCftRYoVh9rNBvL4leTGI3dYOklFvJikThUGXke
-            l18CWsXAMvhMNyUWq3mSmWwxyYfyoI3KDYd/W4nc6YYuA8dtn/OqA+cFLcP+SMbe
-            ccj9k0jflzqUch9BJI/FF5ylfsQQ8fmZqfTVOng+a9JeAU0k1r/OYhGu3C+ZFkwZ
-            uZNTCwRC/htRB8fVl84jq3qcLPorh9fHBHAEZXBtflEb0EzM6bxgk4rZE1Zq/mAg
-            ko59dtkzepRxdcThwIMcAG3ZsokjcoV2WoWidW1Udw==
-            =WS0N
+            hQIMA/TdON2O1nIWARAAhRo+Qtu9gL2V6g8ONKEiKd9p5z1fX1f/hIq9FSnDYDbE
+            2NmHXNxKIM0lDsnYTsNLUHRj5GvIjBTNrPEZ+tyJ/nusSzPM9b17NmVns4uZhJ3c
+            v2ktc4BkaWfMF5Iui7IwD24xEikPW8ekKNE7+6CP2xSb/8xA0AS7OvPOSxTjAZr+
+            S+KxaGpHXsZOxLHQTkkQpnrtPrOPVhScUDmquyqelvAjn/13qKJYY2ZAjrkhG5mF
+            Xl2br6aiPcfDoi4Ui2KZbRxQztFloVS+iLdWYL1HcdJQGjCcsUYVNI/3A1H18IDV
+            QyQffWr43GzKEoT1Une7h2Bmp/VkWcWTao+T2dt6SXcfWJHcbNPisTHejvMi6ZAG
+            +101siIjWNfMUGKur3u2eu9L1uFCeJrhOKGSgWfjOYyq6An2Sz90EbaQp4bCHyYm
+            aZgTzNGSrwFkk4JpurTKyX+5/JA3CUXNtovWySqSNe2hq2mIR2ppNQI3MsARSli5
+            zIw2MzS69ST7/pMIpb6B01zNB5mctYfGEj3TC6WZwdZQyU7b4bEI8QSx++ey2Qrs
+            mhHgS9gFld/ke3NfRsli6/jLX3hep3EvsBQw6N0s9zEvpbWcYSKaSypw02WaUl96
+            fGMrEyYP9+h7edUsfdGu4frZaBl7ExSWZnEyGubBrKBgR36ccUTtSu5z/krSFPXS
+            XgHW2L5JQKVblt09q8LXGdkHLPnACGeG4VfMs5rTEG/XF1UabYezBJA3rXfmnpJo
+            dqXRdxb7L8aKCujHX/AMXxy5OVqK0IjiG/5xsLVIsba7p3JkNLtOqaSQAbg6yvQ=
+            =0XEw
             -----END PGP MESSAGE-----
-          fp: FBC7B9E2A4F9289AC0C1D4843D16CEE4A27381B4
+          fp: 2CB8C243BA73C9A565B072F3AD16CD69FE3F4F64
     encrypted_regex: ^(secrets|workspace.secrets)$
     version: 3.7.3
