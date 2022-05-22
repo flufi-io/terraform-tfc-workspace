@@ -9,12 +9,11 @@ import (
 
 	"github.com/gruntwork-io/terratest/modules/terraform"
 	"github.com/joho/godotenv"
-	"github.com/stretchr/testify/assert"
 )
 
 func TestCompleteExample(t *testing.T) {
 	godotenv.Load("../../.env")
-	workspaceName := "terraform-workspace-dummy"
+
 	// DELAY is the time in seconds to run terraform destroy after terraform apply
 	DELAY, _ := strconv.Atoi(os.Getenv("DELAY"))
 	varFiles := []string{"../../examples/complete/terraform.tfvars"}
@@ -37,8 +36,6 @@ func TestCompleteExample(t *testing.T) {
 
 	terraform.InitAndApply(t, terraformOptions)
 
-	output := terraform.Output(t, terraformOptions, "workspace_name")
-	assert.Equal(t, workspaceName, output)
 }
 
 func delay(seconds int) {
